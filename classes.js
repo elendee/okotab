@@ -62,7 +62,13 @@ class Pad {
 			}else if( e.keyCode === 13 ){
 				if( pad.ctrlPressed ){
 					pad.set()
-					.then( res => { hal('success', 'saved boards', 3 * 1000 )})
+					.then( res => {
+						if( res ){
+							hal('success', 'saved boards', 3 * 1000 )
+						}else{
+							hal('error', res ? ( res.msg || 'error saving board' ) : 'error', 5 * 1000 )
+						}
+					})
 					.catch( err => { console.log( err )})
 				}
 			}
@@ -129,14 +135,19 @@ class Pad {
 
 	async set(){
 
-		if( !this.boards[ this.active_key ] ){
-			console.log( 'invalid board for save', this.active_key )
+		this.boards[ this.active_key ] = this.scratchpad.value
+
+		if( this.boards[ this.active_key ] === '' ){
+			this.scratchpad.value = '(empty)'
+			this.boards[ this.active_key ] = this.scratchpad.value
+		}
+
+		if( !this.boards[ this.active_key ]){
+			console.log( 'invalid board for save: ', this.active_key )
 			return
 		}
 
-		this.boards[ this.active_key ] = this.scratchpad.value
-
-		console.log('saving: ', this.boards )
+		// console.log('saving: ', this.boards )
 
 		const r = await fetch_wrap( env.SCRIPT_ROOT_URL + '/boards_set.php', 'post', {
 			pw: env.PW,
@@ -147,7 +158,7 @@ class Pad {
 			return
 		}
 
-		console.log( r )
+		return true
 	}
 
 	set_active( key ){
