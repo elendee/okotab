@@ -91,7 +91,7 @@ class Pad {
 
 	async get(){
 
-		const r = await fetch_wrap( env.GET_URL, 'post', {
+		const r = await fetch_wrap( env.SCRIPT_ROOT_URL + '/boards_get.php', 'post', {
 			pw: env.PW,
 		})
 		if( !r || !r.success ){
@@ -138,7 +138,7 @@ class Pad {
 
 		console.log('saving: ', this.boards )
 
-		const r = await fetch_wrap( env.SET_URL, 'post', {
+		const r = await fetch_wrap( env.SCRIPT_ROOT_URL + '/boards_set.php', 'post', {
 			pw: env.PW,
 			boards: JSON.stringify( this.boards ),
 		})
