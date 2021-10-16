@@ -1,0 +1,114 @@
+body{
+    background: black;
+    margin: 0px;
+}
+
+div, 
+textarea{
+	font-size: 12px;
+}
+
+#content{
+	background: #171717;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+#scratchpad{
+	display: inline-block;
+/* 	width: 90%; */
+	height: 100vh;
+	background: #232323;
+	color: rgb(150, 250, 150);
+	font-family: monospace;
+/*     font-size: .8rem; */
+    padding: 10px;
+	border: 0px;
+	position: fixed;
+	width: calc( 100% - 68px);
+	right: 0px;
+}
+
+#scratchpad:focus{
+	outline: 0;
+}
+
+
+#colophon{
+	display: none;
+}
+
+#last-scratch{
+	position: fixed;
+	z-index: 9;
+	top: 10px;
+	right: 20px;
+	color: #d4c59d;
+	font-size: .8rem;
+/* 	padding: 30px 0; */
+/* 	border: 1px solid; */
+}
+
+#how{
+	position: fixed;
+	bottom: 10px;
+	right: 20px;
+	color: white;
+	width: 300px;
+/* 	border: 2px solid red; */
+	text-align: right;
+}
+
+#question{
+    font-size: 2rem;
+/* 	border: 2px solid blue; */
+	
+}
+
+#how:hover #hover{
+	display: initial;
+}
+
+#hover{
+    display: none;    
+    position: absolute;
+    bottom: 40px;
+    right: 0px;
+    width: 300x;
+    background: rgba(0, 0, 0, .8);
+    padding: 10px;
+/*     border: 2px solid green; */
+}
+
+#boards{
+	position: fixed;
+/* 	border: 2px solid white; */
+	top: 10px;
+	left: 0px;
+	width: 60px;
+	color: #f1d4a1;
+	padding: 0 5px;
+/*     font-size: .8rem; */
+}
+
+#boards .explain{
+	color: white;
+}
+
+.button{
+	cursor: pointer;
+}
+
+.button.active{
+    color: #093535;
+    background: #37a2a2;
+    font-weight: bold;
+}
+
+.button:hover{
+	background: #2e666f;
+}
+

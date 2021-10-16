@@ -1,0 +1,8 @@
+.*
+!.gitignore
+env.js
+env.php
+oko-localStorage*
+oko_LOG.php
+
+
