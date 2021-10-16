@@ -2,8 +2,10 @@
 new tab todo list chrome extension
 
 # install
-open Chrome extensions, make sure Dev mode is on, and Load Unpacked
-choose the folder, wherever you put it, and enable the extension
+open Chrome extensions (`chrome://extensions/`), make sure Dev mode is on
+Put this repo in the folder you use for your Chrome extensions
+click Load Unpacked
+Extension should now appear and be enabled
 
 ## server things:
 
