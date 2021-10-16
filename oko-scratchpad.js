@@ -1,8 +1,5 @@
-// import env from './env.js?v=1'
 import hal from './hal.js?v=1'
-// import fetch_wrap from './fetch_wrap.js?v=1'
 import {
-	// Board,
 	Pad,
 } from './classes.js?v=1'
 
