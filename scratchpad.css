@@ -8,6 +8,13 @@ textarea{
 	font-size: 12px;
 }
 
+pre{
+	padding: 2 5px;
+	display: inline-block;
+	background: rgba(255, 255, 255, .5);
+	color: black;
+}
+
 #content{
 	background: #171717;
 	display: flex;
