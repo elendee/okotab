@@ -21,10 +21,10 @@ $TODO_PW = 'my-uber-password';
 ```
 - ( Important: Create the `TODO-BOARDS.txt` file on your server - probably in a private directory - this is your todo lists. )
 
-## client / localhost things
-
 #### allow CORS ( requests from outside the server )
 - make sure that folder or a previous one has an `.htaccess` file with the following: `Header set Access-Control-Allow-Origin "*"`
+
+## client / localhost things
 
 #### env.js file:
 - make an `env.js` file in the extension folder, with the following variables to connect to your server:
