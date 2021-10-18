@@ -105,7 +105,7 @@ class Pad {
 			return
 		}
 
-		console.log( 'get: ', r )
+		// console.log( 'get: ', r )
 
 		let boards
 		try{
