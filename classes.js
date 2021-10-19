@@ -163,11 +163,6 @@ class Notebook {
 		if( type === 'private' ){
 			this.pages = b || default_pages
 		}
-		// else if( type === 'public' ){
-		// 	console.log( b )
-		// 	debugger
-		// }
-
 		return b
 
 	}
@@ -246,7 +241,7 @@ class Notebook {
 			private: !public_set,
 		}
 
-		console.log('sending: ', post )
+		// console.log('sending: ', post )
 
 		const r = await fetch_wrap( url + '/pages_set.php', 'post', post )
 

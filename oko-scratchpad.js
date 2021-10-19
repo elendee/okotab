@@ -28,7 +28,9 @@ notebook.get('private')
 		const url = set.URL
 		notebook.get( 'public', set )
 		.then( pages => {
+			
 			const data = pages || {}
+
 			const page = new Page({
 				// data things
 				name: data.name || lib.random_hex( 6 ),
