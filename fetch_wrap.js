@@ -21,11 +21,11 @@ export default ( url, method, body, no_spinner ) => {
 				.then( r => {
 					resolve( r )
 				}).catch( err => {
-					reject( err )
+					resolve( err )
 				})
 			}).catch( err => {
 				spinner.hide()
-				reject( err )
+				resolve( err )
 			})
 
 		}else if( method.match(/get/i) ){
@@ -37,11 +37,11 @@ export default ( url, method, body, no_spinner ) => {
 				.then( r => {
 					resolve( r )
 				}).catch( err => {
-					reject( err )
+					resolve( err )
 				})
 			}).catch( err => {
 				spinner.hide()
-				reject( err )
+				resolve( err )
 			})
 
 		}else{

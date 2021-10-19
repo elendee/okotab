@@ -17,13 +17,14 @@ const notebook = window.notebook = new Notebook({
 	scratchpad: scratchpad,
 })
 
-// INIT PRIVATE
 
-notebook.get('private')
-.then( pages => {
+;(async() => {
+
+
+	// INIT PRIVATE
+	const pages = await notebook.get('private')
 
 	// INIT PUBLIC
-
 	for( const set of env.PUBLIC || [] ){
 		const url = set.URL
 		notebook.get( 'public', set )
@@ -47,4 +48,8 @@ notebook.get('private')
 		})
 	}
 
-})
+})();
+
+
+
+	

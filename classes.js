@@ -128,13 +128,14 @@ class Notebook {
 			return
 		}
 
-		const r = await fetch_wrap( url + '/pages_get.php', 'post', {
+		let r = await fetch_wrap( url + '/pages_get.php', 'post', {
 			pw: pw,
 		})
 		if( !r || !r.success ){
 			console.log( r )
 			hal('error', 'error getting pages', 10 * 1000 )
-			return
+			// return
+			r = {}
 		}
 
 		if( r.pages === '' ) r.pages = '{}'
