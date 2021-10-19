@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Headers: " . $_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS'] );
 
 include_once('env.php');
-include_once('oko_LOG.php');
+// include_once('oko_LOG.php');
 
 $r = new stdClass;
 $r->success = true;
@@ -40,7 +40,7 @@ if( empty( $body['pw'] ) ){ // reject
 
 	}else{ // get
 
-		oko_LOG('attempting: ' . $TODO_PW . ' ' . $TODO_URI );
+		// oko_LOG('attempting: ' . $TODO_PW . ' ' . $TODO_URI );
 
 		$pages = file_get_contents( $TODO_URI );
 
