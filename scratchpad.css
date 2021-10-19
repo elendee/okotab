@@ -26,12 +26,10 @@ pre{
 
 #scratchpad{
 	display: inline-block;
-/* 	width: 90%; */
 	height: 100vh;
 	background: #232323;
 	color: rgb(150, 250, 150);
 	font-family: monospace;
-/*     font-size: .8rem; */
     padding: 10px;
 	border: 0px;
 	position: fixed;
@@ -55,8 +53,6 @@ pre{
 	right: 20px;
 	color: #d4c59d;
 	font-size: .8rem;
-/* 	padding: 30px 0; */
-/* 	border: 1px solid; */
 }
 
 #how{
@@ -65,14 +61,11 @@ pre{
 	right: 20px;
 	color: white;
 	width: 300px;
-/* 	border: 2px solid red; */
 	text-align: right;
 }
 
 #question{
     font-size: 2rem;
-/* 	border: 2px solid blue; */
-	
 }
 
 #how:hover #hover{
@@ -87,22 +80,20 @@ pre{
     width: 300x;
     background: rgba(0, 0, 0, .8);
     padding: 10px;
-/*     border: 2px solid green; */
 }
 
 #boards{
 	position: fixed;
-/* 	border: 2px solid white; */
 	top: 10px;
 	left: 0px;
 	width: 60px;
 	color: #f1d4a1;
 	padding: 0 5px;
-/*     font-size: .8rem; */
 }
 
 #boards .explain{
 	color: white;
+	background: rgba(255, 255, 255, .2);
 }
 
 .button{
@@ -118,4 +109,3 @@ pre{
 .button:hover{
 	background: #2e666f;
 }
-
