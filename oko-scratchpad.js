@@ -51,5 +51,10 @@ const notebook = window.notebook = new Notebook({
 })();
 
 
-
+window.addEventListener('focus', e => {
+	notebook.ctrlPressed = false
+})
+window.addEventListener('blur', e => {
+	notebook.ctrlPressed = false
+})
 	
